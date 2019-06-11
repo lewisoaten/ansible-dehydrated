@@ -22,7 +22,7 @@ fi
 
 
 # start dehydrated with option --cron
-su "$DEHYDRATED_USER" --command "$DEHYDRATED_BIN --cron --config {{ dehydrated_configdir }}/config" >> "$LOG" 2> >(tee -a "$LOG" >&2)
+su "$DEHYDRATED_USER" --command "$DEHYDRATED_BIN --cron --accept-terms --config {{ dehydrated_configdir }}/config" >> "$LOG" 2> >(tee -a "$LOG" >&2)
 
 
 log "dehydrated finished, start deploy certificates"
